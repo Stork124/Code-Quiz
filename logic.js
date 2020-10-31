@@ -1,3 +1,25 @@
+//GRAB START BUTTON
+let sartButton = document.querySelector('#startButton')
+//GRAB START SCREEN HTML
+let startScreen = document.querySelector('.startPage')
+
+//GRAB QUESTIONS HTML
+let quizQuestions = document.querySelector('.quizQuestions')
+
+//START QUIZ FUNCTION
+function startQuiz(){
+    //hide start screen
+    startScreen.setAttribute("class", "hide");
+}
+
+startButton.startQuiz()
+
+
+
+
+
+
+/*playing with timer and start button
 //grab button
 let startCountDown = document.querySelector('#startButton');
 //grab document element to place counter
@@ -13,7 +35,7 @@ var countdown = function(num) {
 
 startCountDown.addEventListener('click', countdown)
 
-
+*/
 
 
 
