@@ -11,27 +11,20 @@
     
      <body>
         <header>
-            <div class="highScores"><a href="hs.html">HighScores</a></div>
-            <div id="time">Time:<span id="counter"></span></div>
+            <div class="highScores"><a href="highscores.html">HighScores</a></div>
+            <div id="time">Time: <span id="counter">60</span></div>
             
         </header>
         <hr>
-        <main class="container">
-             <div class="startPage"> 
+        <div class="container">
+             <div id="startPage"> 
                 <h1>CODING QUIZ</h1>
                 <p>Welcome to the coding quiz. Answer the questions and see your score! Click the Start Button to begin!</p>
                 <button id="startButton" class="startButton">START QUIZ</button>
             </div>
 
-            <div class="quizQuestions hide">
-                <h1 class="question"></h1>
-                <button id="answer1" type="radio"></button>
-                <button id="answer2" type="radio"></button>
-                <button id="answer3" type="radio"></button>
-                <button id="answer4" type="radio"></button>
-            </div>
+            
 
-        </main>
         </div>
         
         <script type="text/javascript" src="logic.js">

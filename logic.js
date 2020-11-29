@@ -1,18 +1,38 @@
+let body = document.querySelector('body');
 //GRAB START BUTTON
-let sartButton = document.querySelector('#startButton')
+let sartButton = document.querySelector('#startButton');
 //GRAB START SCREEN HTML
-let startScreen = document.querySelector('.startPage')
+let startScreen = document.querySelector('.container');
+// GRAB COUNTER HTML FOR TIMER
+let counterEl = document.querySelector('#counter');
+let time = 60
 
-//GRAB QUESTIONS HTML
-let quizQuestions = document.querySelector('.quizQuestions')
+// TIMER FUNCTION
 
-//START QUIZ FUNCTION
-function startQuiz(){
-    //hide start screen
-    startScreen.setAttribute("class", "hide");
+let timer = function timeLeft(){
+    let timeRemaining = setInterval(() => {
+        time--;
+        counterEl.textContent = time;
+
+        if (time === 0){
+            clearInterval(timeRemaining);
+            //GAME OVER MESSAGE / SHOWSCORE
+        }
+
+    }, 1000);
 }
 
-startButton.startQuiz()
+
+
+//HIDE START SCREEN WHEN START BUTTON IS CLICKED
+let startQuiz = startButton.addEventListener('click', function(){
+                    startScreen.setAttribute('class', 'hide');
+                });
+                startButton.addEventListener('click', timer)
+                
+
+
+
 
 
 
@@ -98,23 +118,4 @@ startButton.addEventListener('click', startCountdown);
 
 
 
- // QUIZ QUESTIONS
-
- let questions = [
-     {
-        question: 'Whatis used to declare an array?',
-        choices: ['parentheses ()', 'greater / less than <>', 'square brackets []', 'curly braces {}'],
-        answer: 'square brackets []'
-    },
-    {
-        question: 'a for loop is used to ____?',
-        choices: ['iterate through an array / object', 'count up an d down', 'spell the word for', 'do nothing'],
-        answer: 'iterate through an array / object',
-    },
-    {
-        question: 'what does API stand for?',
-        choices: ['Always Pass Intonation', 'Advanced Programming Interface', 'Adapted Processor Information', 'Application Programming Interface'],
-        answer: 'Application Programming Interface'
-    }
-
- ]
+ 
