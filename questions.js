@@ -18,8 +18,13 @@ let questions = [
    },
    {
        question: 'What is the DOM?',
-       choices: ['The guy from the fast and the furious movies', 'Shorthand for dominate, Document Object Model'],
+       choices: ['The guy from the fast and the furious movies', 'Shorthand for dominate, Document Object Model', 'Direct Object Modual'],
        answer: 'Document Object Model'
+   },
+   {
+       question: 'What symbol identifies a block of code?',
+       choices: ['Question marks: ?', 'Hashtags: #', 'Parentheses: ()', 'Curly brackets: {}'],
+       answer: 'Curly brackets: {}'
    }
 
 ]
